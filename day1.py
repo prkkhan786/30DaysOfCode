@@ -62,5 +62,30 @@ class Solutiion:
         12 + 02 + 02 = 1
 
         '''
-        pass
+
+
+        try:
+
+            set_dictionary = []
+            set_dictionary.append(n)
+            while(n!=1):
+                newdigit = 0
+                digitString = str(n)
+                digits = [int(digit) for digit in digitString]
+
+                for i in digits:
+                     newdigit = newdigit + (i * i)
+                if(newdigit in set_dictionary):
+                    return False
+                set_dictionary.append(newdigit)
+                n = newdigit
+            return True
+        except:
+            return False
+
+
+
+
+
+
 
